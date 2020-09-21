@@ -1,0 +1,20 @@
+#Shoka off-site setting
+#Warning: this setting is not complete, the complete setting is in ./themes/shoka
+
+valine:
+  appId: mCWnwPuS6esiwiyEOio9qnbP-gzGzoHsz
+  appKey: UbSA9UXeM8wmdMPA3AqqqrPL
+  placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
+  avatar: mp # Gravatar style
+  pageSize: 10 # Pagination size
+  lang: zh-CN
+  visitor: true # Article reading statistic
+  recordIP: true # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  requiredFields:
+    - nick
+    - mail
+  enableQQ: true
+  masters: ['主人email的MD5值', '另一个email的MD5值']
+  masterTag: 主人
+  tips: "昵称框中填入QQ号，将自动获取QQ昵称&邮箱&头像；其他邮箱由Gavatar提供头像。"
