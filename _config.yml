@@ -204,5 +204,5 @@ feed:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Win7GM/Hexo-Blog.git
+  repo: git@github.com:Win7GM/Hexo-Blog.git
   branch: master
