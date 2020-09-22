@@ -75,8 +75,8 @@ menu:
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+  #position: left
+  position: right
 
 # Social Links
 # Usage: `Key: permalink || icon || color`
@@ -100,7 +100,7 @@ social:
 
 post:
   # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-  count: false
+  count: true
 
 # TagCloud settings for tags page.
 tagcloud:
@@ -113,13 +113,13 @@ tagcloud:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  since: 2010
+  since: 2020
   icon:
     name: sakura rotate
     # Change the color of icon, using Hex Code.
     color: "#ffc0cb"
   # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
-  count: false
+  count: true
 
 # Creative Commons 4.0 International License.
 # See: https://creativecommons.org/share-your-work/licensing-types-examples
@@ -148,7 +148,7 @@ audio:
 # ---------------------------------------------------------------
 
 # Dependencies: https://github.com/amehime/hexo-renderer-multi-markdown-it
-pangu: false
+pangu: true
 
 # Algolia Search
 # For more information: https://www.algolia.com
