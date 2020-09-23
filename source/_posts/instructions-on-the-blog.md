@@ -1,8 +1,8 @@
 ---
 title: 基于Hexo的博客的安装和配置
 date: 2020-09-23 21:39:40
-tags: 博客
-categories: [杂项, manual]
+tags: manual
+categories: [杂项, 博客]
 ---
 
 也不知道能写点啥，姑且写写博客配置的过程吧。
