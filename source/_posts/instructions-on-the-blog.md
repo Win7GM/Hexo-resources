@@ -1,6 +1,5 @@
 ---
 title: 基于Hexo的博客的安装和配置
-date: 2020-09-23 21:39:40
 tags: [manual,unfinished]
 categories: [杂项, 博客]
 ---
