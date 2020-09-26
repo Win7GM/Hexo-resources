@@ -1,6 +1,6 @@
 ---
 title: 基于Hexo的博客的安装和配置
-tags: manual
+tags: [manual,unfinished]
 categories: [杂项, 博客]
 ---
 
