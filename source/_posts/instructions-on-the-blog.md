@@ -1,7 +1,6 @@
 ---
 title: 基于Hexo的博客的安装和配置
-#date: 2020-09-23 21:39:40
-tags: [manual,unfinished]
+tags: manual
 categories: [杂项, 博客]
 ---
 
@@ -129,3 +128,27 @@ git push <你的远端git地址> <分支名>
 ## 配置博客
 ### _config.yml
 _config.yml是博客的基础配置。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 引用
++ [Hexo]
++ [Yume Shoka]
+
+
+
+
+[Hexo]:https://hexo.io/zh-cn/docs/
+[Yume Shoka]:https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/
