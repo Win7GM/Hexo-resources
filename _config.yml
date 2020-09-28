@@ -69,6 +69,11 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  计算机科学: computer-science
+  数据结构: data-structure
+  笔记: note
+  杂项: misc
+  博客: blog
 tag_map:
 
 # Metadata elements
