@@ -35,6 +35,8 @@ index:
   sticky: 置顶文章
   category: 精选分类
   posts: 文章列表
+  random_posts: 随机文章
+  recent_comments: 最新评论
 
 post:
   posted: 发表于
@@ -64,7 +66,7 @@ footer:
 counter:
   index:
     post: "%d 篇文章"
-    category:  "%d 个子项"
+    category:  "%d 个子项，"
   tag_cloud:
     zero: 暂无标签
     one: 目前共计 1 个标签

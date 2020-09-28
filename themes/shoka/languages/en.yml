@@ -35,6 +35,8 @@ index:
   sticky: Sticky Posts
   category: Categories
   posts: Post List
+  random_posts: Random Posts
+  recent_comments: Recent Comments
 
 post:
   posted: Posted on
@@ -64,7 +66,7 @@ footer:
 counter:
   index:
     post: "%d posts in total"
-    category:  "%d subcategories in total"
+    category:  "%d subcategories in total, "
   tag_cloud:
     zero: No tags
     one: 1 tag in total
