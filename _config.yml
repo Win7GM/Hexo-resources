@@ -74,6 +74,8 @@ category_map:
   笔记: note
   杂项: misc
   博客: blog
+  数学: maths
+  线性代数: linear-algebra
 tag_map:
 
 # Metadata elements
