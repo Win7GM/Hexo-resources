@@ -46,12 +46,12 @@ $$\begin{bmatrix}1&0\\0&1\end{bmatrix}$$
 下述在某轴正方向上移动的距离，均指该向量除原点外的另一个端点的移动。首先，线性变换代表的仅仅是基的替换，它们的起始点仍为原点；其次，线性变换规定原点不能移动，换言之，如果原点移动了，那么该变换不是线性变换。
 :::
 在此，
-$a$代表$\hat{i}$在x轴正方向上移动的距离；
-$c$代表$\hat{i}$在y轴正方向上移动的距离。
+$a$代表$\hat{i}$在$x$轴正方向上移动的距离；
+$c$代表$\hat{i}$在$y$轴正方向上移动的距离。
 
 类似地，
-$b$代表$\hat{j}$在x轴正方向上移动的距离；
-$d$代表$\hat{j}$在y轴正方向上移动的距离。
+$b$代表$\hat{j}$在$x$轴正方向上移动的距离；
+$d$代表$\hat{j}$在$y$轴正方向上移动的距离。
 
 显然，在变换后，我们可以发现原本由基向量$\hat{i},\hat{j}$围成的面积为1的正方形被挤压或拉伸，而通过计算并化简之后，可以得出变换后得到的相应的平行四边形的面积为$\begin{vmatrix}a&b\\c&d\end{vmatrix}$，即$ad-bc$。
 
@@ -72,7 +72,18 @@ $$\begin{bmatrix}
 
 由于描述上的麻烦，在此不作推导的解释，但推导原理和二阶行列式的推导原理类似。
 
-总之，三阶行列式的值为$$a\begin{vmatrix}e&f\\h&i\end{vmatrix}-b\begin{vmatrix}d&f\\g&i\end{vmatrix}+c\begin{vmatrix}d&e\\g&h\end{vmatrix}$$
+总之，三阶行列式的值为
+$$a\begin{vmatrix}
+e&f\\
+h&i
+\end{vmatrix}
+-b\begin{vmatrix}
+d&f\\
+g&i
+\end{vmatrix}
++c\begin{vmatrix}d&e\\
+g&h
+\end{vmatrix}$$
 此处使用了*行列式的按行展开*。
 
 ### n阶行列式
