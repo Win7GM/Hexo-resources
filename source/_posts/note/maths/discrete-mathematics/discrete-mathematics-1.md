@@ -22,26 +22,8 @@ quiz: true
     - 真命题
     - 假命题
     - 不是命题 {.correct}
-    - 测试凑数
 {.options}
     > 这种由真能推出假，由假能推出真，于是不能为真，也不能为假的陈述句称为**悖论**。**悖论不是命题。**
-
-2. 有基类 `SHAPE`，派生类 `CIRCLE`，声明如下变量：  {.quiz .multi}
-    ```cpp
-    SHAPE shape1,*p1;
-    CIRCLE circle1,*q1;
-    ```
-    下列哪些项是 “派生类对象替换基类对象”。
-    - `p1=&circle1;` {.correct}
-    - `q1=&shape1;`
-    - `shape1=circle1;` {.correct}
-    - `circle1=shape1;`
-{.options}
-    > - :heavy_check_mark: 令基类对象的指针指向派生类对象
-    > - :x: 派生类指针指向基类的引用
-    > - :heavy_check_mark: 派生类对象给基类对象赋值
-    > - :x: 基类对象给派生类对象赋值
-    > {.options}
 
 
 我们一般使用小写英文字母表示命题，用1表示真，用0表示假。
