@@ -76,6 +76,7 @@ category_map:
   博客: blog
   数学: maths
   线性代数: linear-algebra
+  离散数学: discrete-mathematics
 tag_map:
 
 # Metadata elements
