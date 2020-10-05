@@ -25,9 +25,6 @@ quiz: true
     - 测试凑数
 {.options}
     > 这种由真能推出假，由假能推出真，于是不能为真，也不能为假的陈述句称为**悖论**。**悖论不是命题。**
-# 本文作者： Ruri Shimotsuki @優萌初華
-# 本文链接： https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/special/
-# 版权声明： 本站所有文章除特别声明外，均采用 (CC)BY-NC-SA 许可协议。转载请注明出处！
 
 2. 有基类 `SHAPE`，派生类 `CIRCLE`，声明如下变量：  {.quiz .multi}
     ```cpp
