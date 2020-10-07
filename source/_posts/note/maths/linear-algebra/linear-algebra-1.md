@@ -238,3 +238,30 @@ $$\begin{vmatrix}
 
   $$a_{j1}A_{i1}+a_{j2}A_{i2}+...+a_{jn}A_{in}=0$$
   使用上方[性质2推论](#推论)可以证明。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ## 参考资料
+  1. [3Blue1Brown - 线性代数的本质](https://www.bilibili.com/video/BV1ys411472E)
+  2. [高等教育出版社 - 线性代数（第六版）](http://item.kongfz.com/book/38368122.html/)
+  3. [中国人民大学出版社 - 经济应用数学基础（二）线性代数（第五版）](http://product.dangdang.com/1579041005.html)

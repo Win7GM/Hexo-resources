@@ -55,4 +55,4 @@ q：$3\not=2$
 
 
 ## 参考资料
-[离散数学（第二版），高等教育出版社](http://www.hep.edu.cn/book/details?uuid=92edf222-14a4-1000-973c-3fafc67de19c)
+[高等教育出版社 - 离散数学（第二版）](http://www.hep.edu.cn/book/details?uuid=92edf222-14a4-1000-973c-3fafc67de19c)
