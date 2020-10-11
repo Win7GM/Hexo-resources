@@ -63,7 +63,7 @@ Operation
 在实际使用中，我们定义顺序存储结构的线性表(下称“顺序表”)如：
 ```c
 typedef struct{
-    ElemType data[MAX_SIZE];    //MAX_SIZE是预先定义好的const
+    ElemType data[MAX_SIZE];    //MAX_SIZE是预先定义好的const（使用宏定义）
     int length;                 //用于存储线性表长度
 }SqList;
 ```
