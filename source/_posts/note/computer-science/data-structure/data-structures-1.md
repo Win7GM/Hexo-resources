@@ -233,3 +233,17 @@ void move2(SqList *&L)
 ```
 ;;;
 两种解法的时间复杂度均为`O(n)`，空间复杂度均为`O(1)`。
+
+
+
+
+
+
+
+
+
+
+
+
+## 参考资料
+1. [清华大学出版社-数据结构教程（第五版）](http://www.tup.tsinghua.edu.cn/booksCenter/book_07242104.html)
