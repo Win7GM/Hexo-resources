@@ -23,18 +23,74 @@ $$\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...
 
 ### 矩阵
 $$\bold{A}=\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}$$
-如上由$m*n$个数排成的$m$行$n$列的数表称为$m$行$n$列矩阵（$m*n$矩阵）。
-其余定义不作赘述。
++ 如上由$m*n$个数排成的$m$行$n$列的数表称为$m$行$n$列矩阵（$m*n$矩阵）。
++ 这$m*n$个数称为矩阵$\bold{A}$的元素（元），数$a_{ij}$位于$A$的第$i$行第$j$列，称为矩阵$\bold{A}$的$(i,j)$元。以数$a_{ij}$为$(i,j)$元的矩阵可简记为$(a_{ij})$或$(a_{ij})_{max}$，$m*n$矩阵$\bold{A}$也记作$\bold{A}_{m*n}$。
++ 元素是实数/复数的矩阵称为实矩阵/复矩阵。
++ 行数和列数都等于n的矩阵称为$n$阶矩阵或$n$阶方阵。$n$阶矩阵$\bold{A}$也记作$\bold{A}_{n}$。
++ 只有一行的矩阵称作行矩阵（行向量）。为了避免元素间的混淆，行矩阵在表示时可以**在元素间加逗号**。类似地，只有一列的矩阵称作列矩阵（列向量）。
++ 两个矩阵的行数、列数均相等时，就称他们是同型矩阵；如果两矩阵既是同型矩阵，对应位置上的元素又相等，则这两个矩阵相等。
++ 元素都是零的矩阵称为零矩阵，记作$\bold{O}$。
+    :::warning
+    不同型的零矩阵是不同的。
+    :::
++ 除对角线外的元素均是0。这种矩阵叫做对角（矩）阵，也记作$\bold\Lambda=diag(\lambda_1,\lambda_2,...,\lambda_n)$
++ 除对角线外的元素均是0，且对角线上的元素均是1。这样的方阵叫做**单位矩阵**，记作$\bold{E}$。任何矩阵与单位矩阵相乘，等于其自身。
 
 ### 线性变换
 如$n$个变量$x_1,x_2,...,x_n$与$m$个变量$y_1,y_2,...,y_m$之间的关系式：
-$$\Bigg\{\begin{alignedat}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&y_1\\a_{21}&x_1+&a_{22}&x_2+...+a_{2n}x_n=&y_2\\...&...\\a_{m1}&x_1+&a_{m2}&x_2+...+a_{mn}x_n=&y_m\end{alignedat}$$
-表示的是一个从变量$x_1,x_2,...,x_n$到$y_1,y_2,...,y_m$的线性变换。为了便于理解，使用矩阵进行表示：
-$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}}_{\text{输出向量}}$$
-此处显然使用了矩阵相乘来计算$y_1,y_2,...,y_m$的值。但理解该式的意义并不需要会计算它。为了便于说明，使用二阶方阵：
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}$$
-该矩阵作为线性变换的几何意义是将基向量$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix}$和$\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$拉伸或压缩为$\hat{i}=\begin{pmatrix}a\\c\end{pmatrix}$$\hat{j}=\begin{pmatrix}b\\d\end{pmatrix}$。因为空间（此处为平面）基于基向量展开，所以空间会被拉伸或压缩。在向量被输入到线性变换时：
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}2a+3b\\2c+3d\end{pmatrix}$$
-即输入向量会被线性变换变换为其空间在线性变换后的值，即输出向量。
+$$\Bigg\{\begin{alignedat}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&y_1\\a_{21}&x_1+&a_{22}&x_2+...+a_{2n}x_n=&y_2\\...&...\\a_{m1}&x_1+&a_{m2}&x_2+...+a_{mn}x_n=&y_m\end{alignedat}$$ 表示的是一个从变量$x_1,x_2,...,x_n$到$y_1,y_2,...,y_m$的线性变换。为了便于表示和理解，使用矩阵进行表示：
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}}_{\text{输出向量}}$$ 此处显然使用了矩阵相乘来计算$y_1,y_2,...,y_m$的值。但理解该式的意义并不需要会计算它。但为了方便理解，在这里提出：**矩阵相乘需要左侧矩阵的列数等于右侧矩阵的行数**。
 
-又如三阶矩阵，显然，其表示一个三维空间的线性变换。实际上其和二维空间大同小异，只是多了一个基向量$\hat{k}$。
+为了便于理解，我们需要先回忆一下高中学习的向量知识：
++ 一个二维向量能够被表示为坐标，是因为它可以在向量空间中被表示为基向量$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix},\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$的和（$n$维向量同理）。由此，我们为了方便，将向量的一端固定在原点，记录向量另一端的坐标，即可表示相应的向量。
+
+而线性变换即是对基向量的操作。它通过变换基向量变换整个空间。
+
+使用单位矩阵进行举例：
+$$\begin{pmatrix}1&0\\0&1\end{pmatrix}$$ 使用分块法将矩阵分为两列：
+$$\bold{E}=\begin{pmatrix}1&0\\0&1\end{pmatrix}=\begin{pmatrix}\hat{i}&\hat{j}\end{pmatrix}$$ 其中$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix},\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$。
+则有：
+$$\bold{E}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}1&0\\0&1\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}\hat{i}&\hat{j}\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}2\hat{i}+3\hat{j}\end{pmatrix}=\begin{pmatrix}2\begin{pmatrix}1\\0\end{pmatrix}+3\begin{pmatrix}0\\1\end{pmatrix}\end{pmatrix}=\begin{pmatrix}2\\3\end{pmatrix}$$
+为了推广到任意二阶矩阵，使用二阶方阵：
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}$$ 该矩阵作为线性变换的几何意义是将基向量$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix}$和$\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$拉伸或压缩（也可简单理解为“替换”）为$\hat{i}=\begin{pmatrix}a\\c\end{pmatrix},\hat{j}=\begin{pmatrix}b\\d\end{pmatrix}$。因为空间（此处为平面）基于基向量展开，所以空间会被拉伸或压缩。在向量被输入到线性变换时：
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}2a+3b\\2c+3d\end{pmatrix}$$ 输出向量为经过该线性变换后输入向量在$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix}$和$\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$的空间下的向量。
+
+
+三阶矩阵同理：显然，其表示一个三维空间的线性变换。实际上其和二维空间大同小异，只是多了一个基向量$\hat{k}=\begin{pmatrix}0\\0\\1\end{pmatrix}$。
+
+类似的，更高阶的线性变换也可以通过该过程理解（只不过无法给出直观的几何解释）。
+#### 与行列式的联系
+##### 行列式不等于0
+线性变换拉伸或压缩空间。显然，单位面积的大小发生了改变。此时，行列式的值就等于单位面积大小变化的倍率。有兴趣的可以在纸上画一下自己写出二维的情况（三维太难画了，算了吧）。
+
+值得注意的是，行列式的值可以是负值，但我们平常提到体积和面积等单位的时候不存在负值。为了区别负值的情况，我们引入**有向面积**和**有向体积**这种概念。当$\hat{i}$和$\hat{j}$围成的平行四边形在$\hat{j}$以原点为中心的顺时针方向时，行列式为正；反之则为负。
+
+类似地，在三维空间中，我们规定：如果变换后的平行六面体不再符合右手定则，则行列式为负。
+:::info
+右手定则：食指指向$\hat{i}$，中指指向$\hat{j}$，拇指指向$\hat{k}$。
+:::
+##### 行列式等于0
+行列式等于0，代表该矩阵表示的线性变换将体积/面积挤压到没有了。例如：三维空间被挤压为一个平面，一条直线，甚至一个点。
+
+#### 非方阵表示的线性变换
+虽然非方阵不存在行列式，但它们也可以表示线性变换。此时，它们表示不同维数之间的转换。
+例如：
+$$\begin{pmatrix}1&5&2\end{pmatrix}$$ 这个线性变换接收三维空间的向量，将其映射到一条数轴上：
+$$\begin{pmatrix}1&5&2\end{pmatrix}\begin{pmatrix}1\\2\\3\end{pmatrix}=17$$ 
+又例如：
+$$\begin{pmatrix}1&0&0\\2&5&6\end{pmatrix}$$ 这个线性变换同样接收三维空间向量，但将其映射到二维空间上：
+$$\begin{pmatrix}1&0&0\\2&5&6\end{pmatrix}\begin{pmatrix}1\\2\\3\end{pmatrix}=\begin{pmatrix}1\\30\end{pmatrix}$$ 
+又例如：$$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}$$ 这个线性变换接收二维空间向量，但将其映射到三维空间上：
+$$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}\begin{pmatrix}1\\2\end{pmatrix}=\begin{pmatrix}5\\8\\11\end{pmatrix}$$
+
+#### 复合线性变换
+线性变换可以复合。复合的方式就是矩阵相乘。
+
+由于**矩阵相乘不满足交换律**，我们需要将先发生的变换写在右侧，将先发生的变换作为输入向量输入后发生的线性变换里。
+
+在前面说明时已经讲过如何将线性变换拆成基向量。在此，我们就是将线性变换拆成其代表的基向量后，分别代入后一线性变换的变换，从而得到复合的线性变换。例如：
+$$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatrix}$$ 其中，第一个线性变换（右侧）接收三维向量，将其映射到二维空间；第二个线性变换（左侧）接收二维向量，将其映射到三维空间。所以，它们的复合应该是一个三维到三维的线性变换，即应该是一个3*3的矩阵，即：
+$$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatrix}=\begin{pmatrix}13&56&8\\14&64&10\\15&72&12\end{pmatrix}$$
+:::warning
+显然，不能相乘的两矩阵所代表的两线性变换不能复合。
+:::
