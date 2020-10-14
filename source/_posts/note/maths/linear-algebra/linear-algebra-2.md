@@ -88,7 +88,8 @@ $$\begin{pmatrix}1&5&2\end{pmatrix}\begin{pmatrix}1\\2\\3\end{pmatrix}=17$$
 $$\begin{pmatrix}1&0&0\\2&5&6\end{pmatrix}$$
 这个线性变换同样接收三维空间向量，但将其映射到二维空间上：
 $$\begin{pmatrix}1&0&0\\2&5&6\end{pmatrix}\begin{pmatrix}1\\2\\3\end{pmatrix}=\begin{pmatrix}1\\30\end{pmatrix}$$ 
-又例如：$$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}$$
+又例如：
+$$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}$$
 这个线性变换接收二维空间向量，但将其映射到三维空间上：
 $$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}\begin{pmatrix}1\\2\end{pmatrix}=\begin{pmatrix}5\\8\\11\end{pmatrix}$$
 
