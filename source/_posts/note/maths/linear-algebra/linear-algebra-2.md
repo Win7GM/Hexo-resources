@@ -112,7 +112,7 @@ $$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatr
 
 ## 矩阵的运算
 ### 加法
-设有两个m*n矩阵A=(a_{ij})和B=(b_{ij})，那么这两个矩阵的和记为A+B，规定为：
+设有两个$m*n$矩阵$\bold{A}=(a_{ij})$和$\bold{B}=(b_{ij})$，那么这两个矩阵的和记为$\bold{A+B}$，规定为：
 $$\bold{A+B}=\begin{pmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{pmatrix}$$
 即相应位置元素相加。显然，类型不同的矩阵不能相加。
 
