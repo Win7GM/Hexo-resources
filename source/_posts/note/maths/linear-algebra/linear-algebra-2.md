@@ -17,12 +17,12 @@ $$\Bigg\{\begin{alignedat}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&b_1\\a_{21}&x
 
 需要注意的是，对于线性方程组，上述三个问题的答案完全取决于其式中的$m*n$个系数和右端的常数项$b_1,b_2,...b_m$。或者说，完全取决于它们构成的矩形数表:
 
-$$\begin{matrix}a_{11}&a_{12}&...&a_{1n}&b_{1}\\a_{21}&a_{22}&...&a_{2n}&b_{2}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}&b_{m}\end{matrix}$$
+$$\begin{matrix}a_{11}&a_{12}&...&a_{1n}&b_{1}\\a_{21}&a_{22}&...&a_{2n}&b_{2}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}&b_{m}\end{matrix}$$
 另外，对于**齐次**线性方程组，相应问题的答案完全取决于：
-$$\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{matrix}$$
+$$\begin{matrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{matrix}$$
 
 ### 矩阵
-$$\bold{A}=\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}$$
+$$\bold{A}=\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}$$
 + 如上由$m*n$个数排成的$m$行$n$列的数表称为$m$行$n$列矩阵（$m*n$矩阵）。
 + 这$m*n$个数称为矩阵$\bold{A}$的元素（元），数$a_{ij}$位于$A$的第$i$行第$j$列，称为矩阵$\bold{A}$的$(i,j)$元。以数$a_{ij}$为$(i,j)$元的矩阵可简记为$(a_{ij})$或$(a_{ij})_{max}$，$m*n$矩阵$\bold{A}$也记作$\bold{A}_{m*n}$。
 + 元素是实数/复数的矩阵称为实矩阵/复矩阵。
@@ -40,7 +40,7 @@ $$\bold{A}=\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\..
 如$n$个变量$x_1,x_2,...,x_n$与$m$个变量$y_1,y_2,...,y_m$之间的关系式：
 $$\Bigg\{\begin{alignedat}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&y_1\\a_{21}&x_1+&a_{22}&x_2+...+a_{2n}x_n=&y_2\\...&...\\a_{m1}&x_1+&a_{m2}&x_2+...+a_{mn}x_n=&y_m\end{alignedat}$$
 表示的是一个从变量$x_1,x_2,...,x_n$到$y_1,y_2,...,y_m$的线性变换。为了便于表示和理解，使用矩阵进行表示：
-$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\...&...&&...\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}}_{\text{输出向量}}$$
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}}_{\text{输出向量}}$$
 此处显然使用了矩阵相乘来计算$y_1,y_2,...,y_m$的值。但理解该式的意义并不需要会计算它。但为了方便理解，在这里提出：**矩阵相乘需要左侧矩阵的列数等于右侧矩阵的行数**。
 
 为了便于理解，我们需要先回忆一下高中学习的向量知识：
@@ -80,6 +80,9 @@ $$\begin{pmatrix}a&b\\c&d\end{pmatrix}\begin{pmatrix}2\\3\end{pmatrix}=\begin{pm
 
 #### 非方阵表示的线性变换
 虽然非方阵不存在行列式，但它们也可以表示线性变换。此时，它们表示不同维数之间的转换。
+:::info
+显然，此时的面积/体积变换倍率要么等于0，要么就不存在。
+:::
 例如：
 $$\begin{pmatrix}1&5&2\end{pmatrix}$$
 这个线性变换接收三维空间的向量，将其映射到一条数轴上：
@@ -98,7 +101,7 @@ $$\begin{pmatrix}1&2\\2&3\\3&4\end{pmatrix}\begin{pmatrix}1\\2\end{pmatrix}=\beg
 
 由于**矩阵相乘不满足交换律**，我们需要将先发生的变换写在右侧，将先发生的变换作为输入向量输入后发生的线性变换里。
 
-在前面说明时已经讲过如何将线性变换拆成基向量。在此，我们就是将线性变换拆成其代表的基向量后，分别代入后一线性变换的变换，从而得到复合的线性变换。例如：
+在前面说明时已经用过[**使用分块法将线性变换拆成基向量**](#线性变换)的方法。在此，我们就是将线性变换拆成其代表的基向量后，分别代入后一线性变换的变换，从而得到复合的线性变换。例如：
 $$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatrix}$$
 其中，第一个线性变换（右侧）接收三维向量，将其映射到二维空间；第二个线性变换（左侧）接收二维向量，将其映射到三维空间。所以，它们的复合应该是一个三维到三维的线性变换，即应该是一个3*3的矩阵，即：
 $$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatrix}=\begin{pmatrix}13&56&8\\14&64&10\\15&72&12\end{pmatrix}$$
@@ -106,3 +109,16 @@ $$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatr
 :::warning
 显然，不能相乘的两矩阵所代表的两线性变换不能复合。
 :::
+
+## 矩阵的运算
+### 加法
+设有两个m*n矩阵A=(a_{ij})和B=(b_{ij})，那么这两个矩阵的和记为A+B，规定为：
+$$\bold{A+B}=\begin{pmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{pmatrix}$$
+即相应位置元素相加。显然，类型不同的矩阵不能相加。
+
+矩阵加法满足交换律和结合律。
+### 数乘
+矩阵数乘，即矩阵和数相乘。我们将数$\lambda$和矩阵A的乘积记作$\lambda\bold{A}$或$\bold{A}\lambda$，规定为：
+$$\lambda\bold{A}=\bold{A}\lambda=\begin{pmatrix}\lambda a_{11}&\lambda a_{12}&...&\lambda a_{1n}\\\lambda a_{21}&\lambda a_{22}&...&\lambda a_{2n}\\\vdots&\vdots&&\vdots\\\lambda a_{m1}&\lambda a_{m2}&...&\lambda a_{mn}\end{pmatrix}$$
+### 矩阵与矩阵相乘
+placeholder
