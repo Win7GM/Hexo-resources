@@ -87,14 +87,14 @@ $A=\lnot B$，若B是n层公式，则A是n+1层公式。
 |名称|公式|
 |:-:|:-:|
 |双重否定律|$$A\iff\lnot\lnot A$$|
-|幂等律|$$A\iff A \lor A\\ A\iff A\land A$$|
-|交换律|$$A\lor B\iff B\lor A \\ A\land B\iff B\land A$$|
-|结合律|$$(A\lor B)\lor C\iff A\lor(B\lor C)\\(A\land B)\land C\iff A\land(B\land C)$$|
-|分配律|$$A\lor(B\land C)\iff(A\lor B)\land(A\lor C)\\A\land(B\lor C)\iff(A\land B)\lor(A\land C)$$|
+|幂等律|$$A\iff A \lor A\\\ A\iff A\land A$$|
+|交换律|$$A\lor B\iff B\lor A \\\ A\land B\iff B\land A$$|
+|结合律|$$(A\lor B)\lor C\iff A\lor(B\lor C)\\\ (A\land B)\land C\iff A\land(B\land C)$$|
+|分配律|$$A\lor(B\land C)\iff(A\lor B)\land(A\lor C)\\\ A\land(B\lor C)\iff(A\land B)\lor(A\land C)$$|
 |德摩根律|$$\lnot(A\lor B)\iff\lnot A\land\lnot B$$|
-|吸收律|$$A\lor(A\land B)\iff A\\A\land(A\lor B)\iff A$$|
-|零律|$$A\lor 1\iff 1\\A\land 0\iff 0$$|
-|同一律|$$A\lor 0\iff A\\A\land 1\iff A$$|
+|吸收律|$$A\lor(A\land B)\iff A\\\ A\land(A\lor B)\iff A$$|
+|零律|$$A\lor 1\iff 1\\\ A\land 0\iff 0$$|
+|同一律|$$A\lor 0\iff A\\\ A\land 1\iff A$$|
 |排中律|$$A\lor\lnot A\iff 1$$|
 |矛盾律|$$A\land\lnot A\iff 0$$|
 |蕴涵等值式|$$A\to B\iff\lnot A\lor B$$|
