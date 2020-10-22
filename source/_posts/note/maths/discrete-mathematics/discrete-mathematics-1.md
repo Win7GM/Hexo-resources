@@ -87,7 +87,7 @@ $A=\lnot B$，若B是n层公式，则A是n+1层公式。
 |名称|公式|
 |:-:|:-:|
 |双重否定律|$$A\iff\lnot\lnot A$$|
-|幂等律|$$A\iff A \lor A\\\ A\iff A\land A$$|
+|幂等律|$$A\iff A \lor A \newline A\iff A\land A$$|
 |交换律|$$A\lor B\iff B\lor A \\\ A\land B\iff B\land A$$|
 |结合律|$$(A\lor B)\lor C\iff A\lor(B\lor C)\\\ (A\land B)\land C\iff A\land(B\land C)$$|
 |分配律|$$A\lor(B\land C)\iff(A\lor B)\land(A\lor C)\\\ A\land(B\lor C)\iff(A\land B)\lor(A\land C)$$|
