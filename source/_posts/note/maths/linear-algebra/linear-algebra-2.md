@@ -7,7 +7,7 @@ math: true
 ---
 ## 线性变换和矩阵
 ### 线性方程组
-$$\begin{cases}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&b_1\\a_{21}&x_1+&a_{22}&x_2+...+a_{2n}x_n=&b_2\\...&...\\a_{m1}&x_1+&a_{m2}&x_2+...+a_{mn}x_n=&b_m\end{cases}$$
+$$\begin{cases}a_{11}x_1&+&a_{12}x_2+...+a_{1n}x_n&=&b_1\\a_{21}x_1&+&a_{22}x_2+...+a_{2n}x_n&=&b_2\\&...&...\\a_{m1}x_1&+&a_{m2}x_2+...+a_{mn}x_n&=&b_m\end{cases}$$
 形如上述方程组的方程组是线性方程组。当常数项$b_1,b_2,...b_m$全部等于0时，上述线性方程组为**n元非齐次线性方程组**。当常数项均为0时，该式为**n元齐次线性方程组**。
 
 对于线性方程组，我们需要讨论：
@@ -38,13 +38,16 @@ $$\bold{A}=\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\v
 
 ### 线性变换
 如$n$个变量$x_1,x_2,...,x_n$与$m$个变量$y_1,y_2,...,y_m$之间的关系式：
-$$\begin{cases}{4}a_{11}&x_1+&a_{12}&x_2+...+a_{1n}x_n=&y_1\\a_{21}&x_1+&a_{22}&x_2+...+a_{2n}x_n=&y_2\\&\dots\\a_{m1}&x_1+&a_{m2}&x_2+...+a_{mn}x_n=&y_m\end{cases}$$
+$$\begin{cases}a_{11}x_1&+&a_{12}x_2+...+a_{1n}x_n&=&b_1\\a_{21}x_1&+&a_{22}x_2+...+a_{2n}x_n&=&b_2\\&...&...\\a_{m1}x_1&+&a_{m2}x_2+...+a_{mn}x_n&=&b_m\end{cases}$$
 表示的是一个从变量$x_1,x_2,...,x_n$到$y_1,y_2,...,y_m$的线性变换。为了便于表示和理解，使用矩阵进行表示：
-$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}}_{\text{输出向量}}$$
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\\vdots\\y_m\end{pmatrix}}_{\text{输出向量}}$$
 此处显然使用了矩阵相乘来计算$y_1,y_2,...,y_m$的值。但理解该式的意义并不需要会计算它。但为了方便理解，在这里提出：**矩阵相乘需要左侧矩阵的列数等于右侧矩阵的行数**。
 
 为了便于理解，我们需要先回忆一下高中学习的向量知识：
 + 一个二维向量能够被表示为坐标，是因为它可以在向量空间中被表示为基向量$\hat{i}=\begin{pmatrix}1\\0\end{pmatrix},\hat{j}=\begin{pmatrix}0\\1\end{pmatrix}$的和（$n$维向量同理）。由此，我们为了方便，将向量的一端固定在原点，记录向量另一端的坐标，即可表示相应的向量。
+:::info
+向量空间就是向量构成的空间。要说样子的话一般表示得和一般的空间挺像的。理解起来其实也差不多，学校里学过的话，把你对画着向量的平面图的理解搬过来就行。
+:::
 
 而线性变换即是对基向量的操作。它通过变换基向量变换整个空间。
 
@@ -116,9 +119,24 @@ $$\begin{pmatrix}1&6\\2&6\\3&6\end{pmatrix}\begin{pmatrix}1&8&2\\2&8&1\end{pmatr
 $$\bold{A+B}=\begin{pmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21}+b_{21}&a_{22}+b_{22}&...&a_{2n}+b_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}+b_{m1}&a_{m2}+b_{m2}&...&a_{mn}+b_{mn}\end{pmatrix}$$
 即相应位置元素相加。显然，类型不同的矩阵不能相加。
 
-矩阵加法满足交换律和结合律。
+矩阵加法满足交换律和结合律，即 $A+B=B+A,A+(B+C)=(A+B)+C$ 。
+
 ### 数乘
 矩阵数乘，即矩阵和数相乘。我们将数$\lambda$和矩阵A的乘积记作$\lambda\bold{A}$或$\bold{A}\lambda$，规定为：
 $$\lambda\bold{A}=\bold{A}\lambda=\begin{pmatrix}\lambda a_{11}&\lambda a_{12}&...&\lambda a_{1n}\\\lambda a_{21}&\lambda a_{22}&...&\lambda a_{2n}\\\vdots&\vdots&&\vdots\\\lambda a_{m1}&\lambda a_{m2}&...&\lambda a_{mn}\end{pmatrix}$$
+
 ### 矩阵与矩阵相乘
-placeholder
+我们先来思考一下，矩阵是什么东西，或者说我们可以把矩阵看作什么东西。
+
+我们前面为了讲解线性方程组，引入了[线性变换](#线性变换)这个概念。我们说，一个线性方程组可以被表示为
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\\vdots\\y_m\end{pmatrix}}_{\text{输出向量}}\tag{1}$$
+显然，其中的线性变换，输入向量和输出向量都是矩阵。那反过来也就是说，我们可以将矩阵看作是一个线性变换，或是一个向量。
+
+那么，从输入向量，我们到底是如何得到输出向量的呢？显然，等量关系就是这个矩阵乘法对应的线性方程组：
+$$\begin{cases}a_{11}x_1&+&a_{12}x_2+...+a_{1n}x_n&=&b_1\\a_{21}x_1&+&a_{22}x_2+...+a_{2n}x_n&=&b_2\\&...&...\\a_{m1}x_1&+&a_{m2}x_2+...+a_{mn}x_n&=&b_m\end{cases}\tag{2}$$
+其中， $y_k=b_k$ 。
+
+从(1)(2)式中，我们可以发现，输出向量的行数等于线性变换的行数。输入向量在*转置后*的列数等于线性变换的列数。即：
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1&x_2&\dots&x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\\vdots\\y_m\end{pmatrix}}_{\text{输出向量}}$$
+按照线性变换的定义（第1，2，……，n列均为构成向量空间的基向量），我们可以得出如下结论：
+?
