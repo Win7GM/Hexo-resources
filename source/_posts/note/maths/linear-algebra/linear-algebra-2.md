@@ -126,17 +126,70 @@ $$\bold{A+B}=\begin{pmatrix}a_{11}+b_{11}&a_{12}+b_{12}&...&a_{1n}+b_{1n}\\a_{21
 $$\lambda\bold{A}=\bold{A}\lambda=\begin{pmatrix}\lambda a_{11}&\lambda a_{12}&...&\lambda a_{1n}\\\lambda a_{21}&\lambda a_{22}&...&\lambda a_{2n}\\\vdots&\vdots&&\vdots\\\lambda a_{m1}&\lambda a_{m2}&...&\lambda a_{mn}\end{pmatrix}$$
 
 ### 矩阵与矩阵相乘
-我们先来思考一下，矩阵是什么东西，或者说我们可以把矩阵看作什么东西。
+#### 定义
+假设有两个线性变换：
+$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}b_{11}&b_{12}&...&b_{1p}\\b_{21}&b_{22}&...&b_{2p}\\\vdots&\vdots&&\vdots\\b_{n1}&b_{n2}&...&b_{np}\end{pmatrix}}_{\text{线性变换}}=\underbrace{\begin{pmatrix}c_{11}&c_{12}&...&c_{1p}\\c_{21}&c_{22}&...&c_{2p}\\\vdots&\vdots&&\vdots\\c_{m1}&c_{m2}&...&c_{mp}\end{pmatrix}}_{\text{线性变换}}$$
+其中， $c_{ij}$是A的第i行和B的第j列的乘积。
+例如：
+$$\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\\a_{31}&a_{32}\end{pmatrix}\begin{pmatrix}b_{11}&b_{12}&b_{13}\\b_{21}&b_{22}&b_{23}\end{pmatrix}=
+\begin{pmatrix}
+a_{11}b_{11}+a_{12}b_{21}&a_{11}b_{12}+a_{12}b_{22}&a_{11}b_{13}+a_{12}b_{23}\\
+a_{21}b_{11}+a_{22}b_{21}&a_{21}b_{12}+a_{22}b_{22}&a_{21}b_{13}+a_{22}b_{23}\\
+a_{31}b_{11}+a_{32}b_{21}&a_{31}b_{12}+a_{32}b_{22}&a_{31}b_{13}+a_{32}b_{23}
+\end{pmatrix}$$
+:::warning
+只有当左矩阵的**列数**等于右矩阵的**行数**时，两个矩阵才能相乘。
+:::
 
-我们前面为了讲解线性方程组，引入了[线性变换](#线性变换)这个概念。我们说，一个线性方程组可以被表示为
-$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\\vdots\\y_m\end{pmatrix}}_{\text{输出向量}}\tag{1}$$
-显然，其中的线性变换，输入向量和输出向量都是矩阵。那反过来也就是说，我们可以将矩阵看作是一个线性变换，或是一个向量。
+#### 性质
+显然， $AB$ 有意义并不代表 $BA$ 有意义，且 $AB$ 一般情况下不等于 $BA$ ，即矩阵乘法**不满足交换律**。
+对于两个方阵$A,B$，如果 $AB=BA$ ，称这两个方阵是可交换的。
+另外，矩阵乘法也**不满足消去律**，即： $AB=O$ 不能推出 $A=O$ 或 $B=O$ 。
 
-那么，从输入向量，我们到底是如何得到输出向量的呢？显然，等量关系就是这个矩阵乘法对应的线性方程组：
-$$\begin{cases}a_{11}x_1&+&a_{12}x_2+...+a_{1n}x_n&=&b_1\\a_{21}x_1&+&a_{22}x_2+...+a_{2n}x_n&=&b_2\\&...&...\\a_{m1}x_1&+&a_{m2}x_2+...+a_{mn}x_n&=&b_m\end{cases}\tag{2}$$
-其中， $y_k=b_k$ 。
+但矩阵乘法满足**结合律**和**分配律**。
 
-从(1)(2)式中，我们可以发现，输出向量的行数等于线性变换的行数。输入向量在*转置后*的列数等于线性变换的列数。即：
-$$\underbrace{\begin{pmatrix}a_{11}&a_{12}&...&a_{1n}\\a_{21}&a_{22}&...&a_{2n}\\\vdots&\vdots&&\vdots\\a_{m1}&a_{m2}&...&a_{mn}\end{pmatrix}}_{\text{线性变换}}\underbrace{\begin{pmatrix}x_1&x_2&\dots&x_n\end{pmatrix}}_{\text{输入向量}}=\underbrace{\begin{pmatrix}y_1\\y_2\\\vdots\\y_m\end{pmatrix}}_{\text{输出向量}}$$
-按照线性变换的定义（第1，2，……，n列均为构成向量空间的基向量），我们可以得出如下结论：
-?
+:::info
+特别地： $\lambda E$ 在乘法的效果上等价于 $\lambda$ （常数），所以可以和所有同阶方阵交换。
+:::
+
+#### 幂
+矩阵的幂类似实数的幂。
+
+要注意的是由于矩阵乘法一般来说不满足交换律，所以两个矩阵的乘积的幂不能随意像两个实数一样合并同类项。
+
+### 转置
+矩阵的转置满足
+$$(A^T)^T=A\tag{i}$$
+$$(A+B)^T=A^T+B^T\tag{ii}$$
+$$(\lambda A)^T=\lambda A^T\tag{iii}$$
+$$(AB)^T=B^TA^T\tag{iv}$$
+
+如果有 $A^T=A$ ，则称A是对称矩阵。其特点是，元素以对角线为对称轴对应相等。
+
+### 方阵的行列式
+如另一篇文章行列式。需要注意的是，方阵是一个数表；而行列式是这些数按照一定的运算规则计算得到的一个数。有：
+$$|\lambda A|=\lambda^n|A|\tag{i}$$
+$$|AB|=|A||B|\tag{ii}$$
+利用性质$(ii)$我们可以推知：
+$$|AB|=|BA|$$
+利用行列式，我们定义矩阵A的伴随矩阵：
+$$A^*=\begin{pmatrix}
+A_{11}&A_{21}&\dots&A_{n1}\\
+A_{12}&A_{22}&\dots&A_{n2}\\
+\vdots&\vdots&&\vdots\\
+A_{1n}&A_{2n}&\dots&A_{nn}\\
+\end{pmatrix}$$
+其中$A_{ij}$是A中对应元素的代数余子式。
+:::warning
+注意伴随矩阵的元素和其原本的位置。
+如果直接将某元素的代数余子式的值填入该元素的位置，那么在最后需要进行**转置**，才能得到伴随矩阵。
+:::
+
+伴随矩阵有性质$AA^*=A^*A=|A|E$。
+可以通过计算证明（只有代数余子式乘上其对应元素的和的元素才是A的行列式，其余都是0）。
+详见展开为含代数余子式的多项式。
+
+## 逆矩阵
+placeholder
+
+
