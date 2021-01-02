@@ -143,5 +143,18 @@ $$\lim_{x\rightarrow \infin}{f(x)}=A\space 或\space f(x)\rightarrow A\space (�
 
 无穷大可以不严谨的理解为无限大的数。
 
-## 极限运算法则
+### 无穷小
+该数趋近于0，但显然不是0。无穷小有一个趋近0的速度，不同的无穷小趋近的速度可能不同。我们通过无穷小的比值来衡量无穷小之间的关系。例如：
+$$\lim_{x\rightarrow a}{\frac{f(x)}{g(x)}}$$
+其中，f(x)和g(x)是当x趋近于a时的无穷小。
+根据上述式子的结果的不同，f(x)和g(x)的关系不同：
+$$\lim_{x\rightarrow a}{\frac{f(x)}{g(x)}}=
+\begin{cases}
+\inf，&则g(x)是f(x)当x趋近于a时的高阶无穷小\\
+1,&则f(x)和g(x)当x趋近于a时的等价无穷小\\
+c，&则g(x)是f(x)当x趋近于a时的同阶无穷小\\
 
+\end{cases}$$
+
+## 极限运算法则
+placeholder
