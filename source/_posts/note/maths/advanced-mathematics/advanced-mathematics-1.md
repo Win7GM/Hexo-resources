@@ -153,7 +153,7 @@ $$\lim_{x\rightarrow a}{\frac{f(x)}{g(x)}}=
 \inf，&则g(x)是f(x)当x趋近于a时的高阶无穷小\\
 1,&则f(x)和g(x)当x趋近于a时的等价无穷小\\
 c，&则g(x)是f(x)当x趋近于a时的同阶无穷小\\
-
+placeholder
 \end{cases}$$
 
 ## 极限运算法则
